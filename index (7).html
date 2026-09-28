@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Year 5 CS & AI – Lesson 2: Data</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#172033;--muted:#596579;--accent:#315efb;--ok:#137a4b;--bad:#b42318}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+header{background:#172033;color:#fff;padding:30px 18px} header div,main{max-width:900px;margin:auto}
+h1{margin:0 0 8px}.tag{display:inline-block;background:#e8edff;color:#2447c6;padding:5px 10px;border-radius:20px;font-weight:700}
+main{padding:22px 16px 50px}.card{background:var(--card);padding:22px;margin:16px 0;border-radius:16px;box-shadow:0 2px 10px #00000010}
+h2{margin-top:0}.vocab span{display:inline-block;margin:4px;padding:6px 10px;background:#eef2f7;border-radius:8px}
+button,.button{border:0;border-radius:10px;padding:10px 14px;background:var(--accent);color:#fff;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}
+.option{display:block;width:100%;text-align:left;margin:8px 0;background:#eef2f7;color:var(--ink)}
+.feedback{font-weight:700;margin-top:8px}.ok{color:var(--ok)}.bad{color:var(--bad)}
+table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid #cfd6e4;padding:9px;text-align:left}th{background:#eef2f7}
+input,textarea{width:100%;padding:10px;border:1px solid #bdc6d6;border-radius:8px;margin:5px 0 10px;font:inherit}
+.step{padding:10px 0;border-bottom:1px solid #e7eaf0}.num{font-weight:700;color:var(--accent)}
+.small{color:var(--muted);font-size:.95rem}
+</style>
+</head>
+<body>
+<header><div><span class="tag">Year 5 CS & AI</span><h1>Lesson 2: Data</h1>
+<p>I can organise data and use it to answer questions.</p></div></header>
+<main>
+<section class="card">
+<h2>🎯 Today's Mission</h2>
+<p><strong>Learning objective:</strong> I can organise data and use it to answer questions.</p>
+<p><strong>Success today:</strong> Use the key words correctly • Complete the practical task • Explain how you know your answer works.</p>
+<div class="vocab"><strong>Key vocabulary:</strong> <span>data</span><span>category</span><span>information</span><span>table</span></div>
+</section>
+
+<section class="card">
+<h2>1. Quick Starter</h2>
+<p><strong>DATA</strong> = collected facts or values. <strong>INFORMATION</strong> = what we learn after organising or interpreting data.</p>
+<p>Which one is <strong>information</strong>?</p>
+<button class="option" onclick="answer(this,false,'q1')">A. Fantasy, Mystery, Fantasy, Adventure</button>
+<button class="option" onclick="answer(this,true,'q1')">B. Fantasy is the most popular reading genre in this group.</button>
+<div id="q1" class="feedback"></div>
+</section>
+
+<section class="card">
+<h2>2. Organise the Raw Data</h2>
+<p>Our class gave these favourite reading genres:</p>
+<p><strong>Fantasy, Mystery, Adventure, Fantasy, Mystery, Fantasy, Adventure, Fantasy</strong></p>
+<p>Complete the organised table on paper or discuss it with your partner before checking.</p>
+<table><tr><th>Category</th><th>Number</th></tr><tr><td>Fantasy</td><td>?</td></tr><tr><td>Mystery</td><td>?</td></tr><tr><td>Adventure</td><td>?</td></tr></table>
+<button onclick="document.getElementById('tableAnswer').innerHTML='<strong>Fantasy = 4, Mystery = 2, Adventure = 2</strong>'">Check table</button>
+<p id="tableAnswer" class="feedback ok"></p>
+</section>
+
+<section class="card">
+<h2>3. Google Sheets Practical Task</h2>
+<p>Now move from discussion to practical work. Open the Sheet assigned by your teacher in <strong>Google Classroom</strong>.</p>
+<div class="step"><span class="num">1.</span> Open <strong>Google Classroom</strong> and select your Year 5 class.</div>
+<div class="step"><span class="num">2.</span> Select <strong>Classwork</strong>.</div>
+<div class="step"><span class="num">3.</span> Open <strong>Lesson 2: Data</strong> and tap the Google Sheets file your teacher assigned.</div>
+<div class="step"><span class="num">4.</span> In Row 1, type <strong>Category</strong> in cell A1 and <strong>Number</strong> in cell B1.</div>
+<div class="step"><span class="num">5.</span> Enter the class categories and numbers carefully, one row at a time.</div>
+<div class="step"><span class="num">6.</span> Check your numbers with a partner.</div>
+<div class="step"><span class="num">7.</span> Use your table to answer the three questions below.</div>
+<p class="small">Google Sheets saves your work automatically. When your teacher asks you to submit, return to Google Classroom and select <strong>Turn in</strong>.</p>
+<a class="button" href="https://sheets.google.com" target="_blank" rel="noopener">Open Google Sheets</a>
+</section>
+
+<section class="card">
+<h2>4. Use Your Table</h2>
+<label>1. Which category has the highest number?</label><input>
+<label>2. Which category has the lowest number?</label><input>
+<label>3. How many responses are there altogether?</label><input>
+<label>Finish this sentence: <strong>The data shows…</strong></label><textarea rows="3"></textarea>
+</section>
+
+<section class="card">
+<h2>5. Check My Understanding</h2>
+<p>What is the purpose of a table?</p>
+<button class="option" onclick="answer(this,false,'q2')">A. To decorate data</button>
+<button class="option" onclick="answer(this,true,'q2')">B. To organise data</button>
+<button class="option" onclick="answer(this,false,'q2')">C. To delete data</button>
+<div id="q2" class="feedback"></div>
+<p>What does a category do?</p>
+<button class="option" onclick="answer(this,true,'q3')">A. Groups similar data</button>
+<button class="option" onclick="answer(this,false,'q3')">B. Makes every value the same</button>
+<div id="q3" class="feedback"></div>
+</section>
+
+<section class="card">
+<h2>⭐ Challenge Zone</h2>
+<label>Write one new question that your table <strong>can</strong> answer.</label><textarea rows="2"></textarea>
+<label>Write one question that your table <strong>cannot</strong> answer.</label><textarea rows="2"></textarea>
+<p><strong>Partner check:</strong> Explain your answer to a partner. Can they challenge your reasoning?</p>
+</section>
+
+<section class="card">
+<h2>⏱️ 2-Minute Exit Ticket</h2>
+<p><strong>What can your organised data tell you that the raw answers could not?</strong></p>
+<textarea rows="4" placeholder="Write 1–2 clear sentences. Use at least one key word: data, category, information, table."></textarea>
+<p class="small">Think silently and answer independently before you leave.</p>
+</section>
+</main>
+<script>
+function answer(btn,correct,id){
+ const out=document.getElementById(id);
+ if(correct){out.textContent="✓ Correct!";out.className="feedback ok";}
+ else{out.textContent="Try again. Think about the meaning of the key words.";out.className="feedback bad";}
+}
+</script>
+</body></html>
